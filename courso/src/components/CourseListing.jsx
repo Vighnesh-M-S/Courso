@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link for navigation
 import { fetchCourses } from '../data/sampleCourses';
 
 const CourseListing = () => {
   const [courses, setCourses] = useState([]);
-  
+
   useEffect(() => {
     const getCourses = async () => {
-      const data = await fetchCourses(); // Implement fetchCourses function
+      const data = await fetchCourses();
       setCourses(data);
     };
-    
+
     getCourses();
   }, []);
 
@@ -19,7 +20,7 @@ const CourseListing = () => {
       <ul>
         {courses.map(course => (
           <li key={course.id}>
-            <div>{course.name}</div>
+            <Link to={`/course/${course.id}`}>{course.name}</Link>
             <div>{course.instructor}</div>
             {/* Add other course details */}
           </li>

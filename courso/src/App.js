@@ -12,6 +12,7 @@ const App = () => {
           <Route path="/" exact element={<CourseListing/>} />
           <Route path="/course/:id" element={<CourseDetails/>} />
           <Route path="/dashboard" element={<StudentDashboard/>} />
+          <Route path="/course/:id" element={<CourseDetails/>} />
         </Routes>
       </div>
     </Router>
