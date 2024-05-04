@@ -24,9 +24,30 @@ const CourseDetails = () => {
     <div className="course-details-container">
       <h2>Course Details</h2>
       <div className="course-details">
-      <div> Name : {course.name} </div>
-      <div>Instructor: {course.instructor}</div>
-      {/* Add other course details */}
+      <div className="instructor">Instructor: {course.instructor}</div>
+      <div className="description">Description: {course.description}</div>
+      <div className="enrollment-status">Enrollment Status: {course.enrollmentStatus}</div>
+      <div className="duration">Duration: {course.duration}</div>
+      <div className="schedule">Schedule: {course.schedule}</div>
+      <div className="location">Location: {course.location}</div>
+      <div className="prerequisites">
+      Prerequisites:
+          <ul>
+            {course.prerequisites.map((prerequisite, index) => (
+              <li key={index}>{prerequisite}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="syllabus">
+          Syllabus:
+          <ul>
+            {course.syllabus.map(item => (
+              <li key={item.week} className="syllabus-item">
+                <span className="week">Week {item.week}:</span> {item.topic}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

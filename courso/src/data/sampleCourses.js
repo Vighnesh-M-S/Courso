@@ -3,7 +3,7 @@ const sampleCourses =[
     id: 1, // Unique identifier for the course
     name: 'Introduction to React Native',
     instructor: 'John Doe', // Name of the course instructor
-    description: 'Learn the basics of React Native development andbuild your first mobile app.',
+    description: 'Learn the basics of React Native development and build your first mobile app.',
     enrollmentStatus: 'Open', // Can be 'Open', 'Closed', or 'InProgress',
     thumbnail: 'your.image.here', //Link to the course thumbnail
     duration: '8 weeks', // Duration of the course

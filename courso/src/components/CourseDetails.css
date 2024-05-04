@@ -12,25 +12,25 @@
     margin-top: 0;
   }
   
-  .course-details .description {
-    color: #555;
-  }
-  
-  .course-details .syllabus {
-    margin-top: 20px;
-  }
-  
-  .syllabus-item {
+  .course-details .instructor,
+  .course-details .enrollment-status,
+  .course-details .duration,
+  .course-details .schedule,
+  .course-details .location {
     margin-bottom: 10px;
   }
   
-  .syllabus-item .week {
-    font-weight: bold;
+  .course-details .prerequisites ul,
+  .course-details .syllabus ul {
+    padding-left: 20px;
   }
   
-  .syllabus-item .topic {
-    margin-left: 10px;
-    font-style: italic;
+  .course-details .syllabus-item {
+    margin-bottom: 5px;
+  }
+  
+  .course-details .syllabus-item .week {
+    font-weight: bold;
   }
   
   /* Add additional styles as needed */

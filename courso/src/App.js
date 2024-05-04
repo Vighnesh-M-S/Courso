@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route,} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import CourseListing from './components/CourseListing';
 import CourseDetails from './components/CourseDetails';
 import StudentDashboard from './components/StudentDashboard';
@@ -10,11 +10,11 @@ const App = () => {
     <Router>
       <div>
         <Header />
-        
+        <Switch>
           <Route path="/" exact component={CourseListing} />
           <Route path="/course/:id" component={CourseDetails} />
           <Route path="/dashboard" component={StudentDashboard} />
-        
+        </Switch>
       </div>
     </Router>
   );
