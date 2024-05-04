@@ -1,0 +1,37 @@
+.course-details-container {
+    padding: 20px;
+  }
+  
+  .course-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .course-details h2 {
+    margin-top: 0;
+  }
+  
+  .course-details .description {
+    color: #555;
+  }
+  
+  .course-details .syllabus {
+    margin-top: 20px;
+  }
+  
+  .syllabus-item {
+    margin-bottom: 10px;
+  }
+  
+  .syllabus-item .week {
+    font-weight: bold;
+  }
+  
+  .syllabus-item .topic {
+    margin-left: 10px;
+    font-style: italic;
+  }
+  
+  /* Add additional styles as needed */
+  

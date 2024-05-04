@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'; // Import useParams to access URL parameters
 import { fetchCourses } from '../data/sampleCourses';
-
+import './CourseDetails.css'
 const CourseDetails = () => {
   const { id } = useParams(); // Get the course ID from the URL
   const [course, setCourse] = useState(null);
@@ -21,11 +21,13 @@ const CourseDetails = () => {
   }
 
   return (
-    <div>
+    <div className="course-details-container">
       <h2>Course Details</h2>
-      <div>Name: {course.name}</div>
+      <div className="course-details">
+      <div> Name : {course.name} </div>
       <div>Instructor: {course.instructor}</div>
       {/* Add other course details */}
+      </div>
     </div>
   );
 };

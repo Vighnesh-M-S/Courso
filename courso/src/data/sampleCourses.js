@@ -37,6 +37,14 @@ const sampleCourses =[
         // Additional enrolled students...
         ]
     },
+    {
+    id: 2, // Unique identifier for the course
+    name: 'Introduction to React',
+    instructor: 'John Dow'
+    }
+    
+
+
 ];
         export const fetchCourses = async () => {
             // Simulate fetching data from an API
