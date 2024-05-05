@@ -12,13 +12,20 @@
     align-items: center;
   }
   
-  .home-button {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px;
-    margin-bottom: 30px;
-  }
   
+  .home-button {
+      margin-right: 1rem;
+      color: #fff; /* Icon color */
+      text-decoration: none; /* Remove underline */
+    }
+    
+    .logo {
+      width: 35px;
+      height: 35px;
+      fill: #fff;
+      margin-right: 8px;
+    }
+
   .profile-button {
     padding: 10px 20px;
     background-color: #007bff;
@@ -38,3 +45,21 @@
     right: 20px;
   }
   
+  .ri-home-line {
+    font-size: 1.5rem; /* Adjust icon size */
+  }
+
+  @media screen and (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .header-left {
+      margin-bottom: 1rem;
+    }
+  
+    .home-button {
+      margin-right: 0;
+    }
+  }

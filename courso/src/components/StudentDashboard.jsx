@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import CourseThumbnail from './CourseThumbnail';
 import { fetchCourses } from '../data/sampleCourses'; // Import fetchCourse function
 // import courseModel from '../data/sampleCourses'; // Assuming courseModel is imported
 import './StudentDashboard.css';
 const StudentDashboard = () => {
   const [selectedStudent, setSelectedStudent] = useState('');
   const [courses, setCourses] = useState([]);
+  const [completedCourses, setCompletedCourses] = useState([]);
   const students = ['Alice Johnson', 'Bob Smith', 'Charlie Brown']; // Example list of students
 
   useEffect(() => {
@@ -33,7 +35,13 @@ const StudentDashboard = () => {
   };
 
   const enrolledCourses = selectedStudent ? getEnrolledCourses() : [];
-
+  const toggleCompletion = courseId => {
+    if (completedCourses.includes(courseId)) {
+      setCompletedCourses(completedCourses.filter(id => id !== courseId));
+    } else {
+      setCompletedCourses([...completedCourses, courseId]);
+    }
+  };
   return (
     <div className="student-dashboard-container">
       <div className="selection-block">
@@ -54,13 +62,23 @@ const StudentDashboard = () => {
             <div className="enrolled-courses">
               {enrolledCourses.map(course => (
                 <div key={course.id} className="course-item">
-                  <img src={course.thumbnail} alt={course.name} />
+                  <CourseThumbnail imageUrl={course.thumbnail} />
                   <div>
                     <h3>{course.name}</h3>
                     <p>Instructor: {course.instructor}</p>
                     {/* Add due date and progress bar */}
-                    <p>Due Date: {course.dueDate}</p>
-                    <progress value={course.progress} max="100">{course.progress}%</progress>
+                    <label>
+                Completed
+                <input
+                  type="checkbox"
+                  checked={completedCourses.includes(course.id)}
+                  onChange={() => toggleCompletion(course.id)}
+                />
+              </label>
+                    <p>Due Date: {course.duration}</p>
+                    <div className="progress-bar">
+                Progress: {completedCourses.includes(course.id) ? '100%' : '0%'}
+              </div>
                     <Link to={`/course/${course.id}`}>View Details</Link>
                   </div>
                 </div>

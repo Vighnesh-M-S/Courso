@@ -28,3 +28,12 @@
   
   /* Add additional styles as needed */
   
+  .likes{
+    right: 20px;
+  }
+
+  .search-container{
+    padding: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+  }

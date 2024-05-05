@@ -57,6 +57,9 @@ const CourseListing = () => {
             <h3>{course.name}</h3>
             <p>Instructor: {course.instructor}</p>
             <Link to={`/course/${course.id}`}>View Details</Link>
+            <div className="likes">
+              <p>Likes: {course.likes}</p>
+              </div>
           </div>
         ))}
       </div>

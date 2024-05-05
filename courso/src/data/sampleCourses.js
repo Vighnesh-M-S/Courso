@@ -5,11 +5,12 @@ const sampleCourses =[
     instructor: 'John Doe', // Name of the course instructor
     description: 'Learn the basics of React Native development and build your first mobile app.',
     enrollmentStatus: 'Open', // Can be 'Open', 'Closed', or 'InProgress',
-    thumbnail: 'your.image.here', //Link to the course thumbnail
     duration: '8 weeks', // Duration of the course
     schedule: 'Tuesdays and Thursdays, 6:00 PM - 8:00 PM',
     location: 'Online',
+    thumbnail: 'https://www.vcubesoftsolutions.com/wp-content/uploads/2021/11/2124-1024x576.jpg',
     prerequisites: ['Basic JavaScript knowledge', 'Familiarity with React'],
+    likes: 5,
     syllabus: [
         {
         week: 1,
@@ -43,11 +44,12 @@ const sampleCourses =[
     instructor: 'John Dow',
     description: 'Learn the basics of React Native development and build your first mobile app.',
     enrollmentStatus: 'Open', // Can be 'Open', 'Closed', or 'InProgress',
-    thumbnail: 'your.image.here', //Link to the course thumbnail
     duration: '8 weeks', // Duration of the course
     schedule: 'Tuesdays and Thursdays, 6:00 PM - 8:00 PM',
     location: 'Online',
+    thumbnail: 'https://www.excelptp.com/wp-content/uploads/2021/05/react-native-banner-img.jpg',
     prerequisites: ['Basic JavaScript knowledge', 'Familiarity with React'],
+    likes: 6,
     syllabus: [
         {
         week: 1,
