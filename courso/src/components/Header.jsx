@@ -5,8 +5,10 @@ import './Header.css';
 const Header = () => {
   return (
     <header className="header">
+      <div className="header-left">
+        <Link to="/" className="home-button">Home</Link>
       <h1>Course Management System</h1>
-      {/* Add the student profile button */}
+      </div>
       <Link to="/Dashboard" className="profile-button">Student Profile</Link>
     </header>
   );

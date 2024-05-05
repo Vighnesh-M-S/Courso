@@ -6,7 +6,45 @@
     justify-content: space-between;
     align-items: center;
   }
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
   
+  .home-button {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .search-bar {
+    display: flex;
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 10px 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 700px;
+    margin-bottom: 40px;
+  }
+  
+  .search-bar button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 40px;
+  }
+  
+  .search-bar button:hover {
+    background-color: #0056b3;
+  }
+
   .profile-button {
     padding: 10px 20px;
     background-color: #007bff;
