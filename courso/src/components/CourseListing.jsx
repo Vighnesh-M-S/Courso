@@ -1,32 +1,65 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchCourses } from '../data/sampleCourses';
-import './CourseListing.css';
+import { fetchCourses } from '../data/sampleCourses'; // Import fetchCourses function
+import './CourseListing.css'; // Import the CSS file
+
 const CourseListing = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredCourses, setFilteredCourses] = useState([]);
   const [courses, setCourses] = useState([]);
 
-  useEffect(() => {
-    const getCourses = async () => {
-      const data = await fetchCourses();
-      setCourses(data);
-    };
+  // Function to fetch all courses
+  const fetchAllCourses = async () => {
+    try {
+      const allCourses = await fetchCourses(); // Fetch courses using fetchCourses function
+      setCourses(allCourses);
+    } catch (error) {
+      console.error('Error fetching courses:', error);
+      // Handle the error gracefully
+    }
+  };
 
-    getCourses();
+  // Load all courses on initial render
+  useEffect(() => {
+    fetchAllCourses();
   }, []);
 
+  // Function to handle search based on course name and instructor
+  useEffect(() => {
+    const filtered = courses.filter(course => {
+      return (
+        course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        course.instructor.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    });
+    setFilteredCourses(filtered);
+  }, [searchTerm, courses]);
+
+  // Handler for search input change
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   return (
-    <div className="course-listing-container">
+    <div>
       <h2>Course Listing</h2>
-      <ul>
-        {courses.map(course => (
-          <li key={course.id} className="course-item">
-            {/* Wrap the course name in a Link component */}
-            <Link to={`/course/${course.id}`} className="course-name">{course.name}</Link>
-            <div className="instructor">{course.instructor}</div>
-            {/* Add other course details */}
-          </li>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search by course name or instructor"
+          value={searchTerm}
+          onChange={handleSearchChange}
+        />
+      </div>
+      <div className="course-list">
+        {filteredCourses.map(course => (
+          <div key={course.id} className="course-item">
+            <h3>{course.name}</h3>
+            <p>Instructor: {course.instructor}</p>
+            <Link to={`/course/${course.id}`}>View Details</Link>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

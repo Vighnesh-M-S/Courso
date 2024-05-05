@@ -5,12 +5,12 @@
   .selection-block {
     position: fixed;
     top: 130px;
-    left: 1430px;
-    width: 20%;
+    right: 10px;
+    width: 15%;
     background-color: #fff;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensure the selection block appears above other content */
+    z-index: 1000; 
   }
   
   .dashboard-content {
