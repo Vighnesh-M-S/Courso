@@ -6,8 +6,19 @@ import StudentDashboard from './components/StudentDashboard';
 import Header from './components/Header';
 import { Provider } from 'react-redux';
 import store from './redux/store'; // Import the Redux store
+import { useEffect } from 'react';
+import { initializeApp } from 'firebase/app';
+import { firebaseConfig } from './data/fireBase';
 
 const App = () => {
+  useEffect(() => {
+    const app = initializeApp(firebaseConfig);
+    // Additional initialization code if needed
+    return () => {
+      // Cleanup code if needed
+    };
+  }, []);
+
   return (
     <Provider store={store}>
       <Router>
