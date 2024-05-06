@@ -3,7 +3,6 @@
     color: #fff;
     padding: 20px;
     display: flex;
-    /* position: fixed; */
     justify-content: space-between;
     align-items: center;
   }
@@ -15,8 +14,8 @@
   
   .home-button {
       margin-right: 1rem;
-      color: #fff; /* Icon color */
-      text-decoration: none; /* Remove underline */
+      color: #fff;
+      text-decoration: none;
     }
     
     .logo {
@@ -40,13 +39,12 @@
   
   /* Adjust positioning of the button */
   .profile-button {
-    /* position: fixed; */
     top: 20px;
     right: 20px;
   }
   
   .ri-home-line {
-    font-size: 1.5rem; /* Adjust icon size */
+    font-size: 1.5rem;
   }
 
   @media screen and (max-width: 768px) {
@@ -63,3 +61,25 @@
       margin-right: 0;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .student-dashboard-container {
+        padding-top: 0; 
+    }
+  
+    .selection-block {
+        top: 100px; 
+        right: 0; 
+        width: 100%;
+        max-width: 300px; 
+        margin: auto; 
+    }
+
+    .dashboard-content {
+        padding-top: 0; 
+    }
+
+    .course {
+        width: 100%;
+    }
+}

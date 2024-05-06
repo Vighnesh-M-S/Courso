@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; // Import useParams to access URL parameters
+import { useParams } from 'react-router-dom'; 
 import { fetchCourses } from '../data/sampleCourses';
 import './CourseDetails.css'
 const CourseDetails = () => {
@@ -19,6 +19,8 @@ const CourseDetails = () => {
   if (!course) {
     return <div>Loading...</div>;
   }
+
+  // Display Details
 
   return (
     <div className="course-details-container">

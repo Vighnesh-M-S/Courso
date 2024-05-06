@@ -40,6 +40,8 @@ const CourseListing = () => {
     setSearchTerm(event.target.value);
   };
 
+  // Display Details
+
   return (
     <div>
       <h2>Course Listing</h2>

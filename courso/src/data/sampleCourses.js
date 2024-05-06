@@ -10,7 +10,7 @@ const sampleCourses =[
    location: 'Online',
    thumbnail: 'https://www.vcubesoftsolutions.com/wp-content/uploads/2021/11/2124-1024x576.jpg',
    prerequisites: ['Basic JavaScript knowledge', 'Familiarity with React'],
-   likes: 5,
+   likes: 7,
    syllabus: [
        {
        week: 1,
@@ -79,7 +79,7 @@ const sampleCourses =[
    },
 
    {
-    id: 2, // Unique identifier for the course
+    id: 3, // Unique identifier for the course
     name: 'Introduction to Python',
     instructor: 'peter',
     description: 'Learn the basics of React Native development and build your first mobile app.',
@@ -87,7 +87,7 @@ const sampleCourses =[
     duration: '8 weeks', // Duration of the course
     schedule: 'Tuesdays and Thursdays, 6:00 PM - 8:00 PM',
     location: 'Online',
-    thumbnail: 'https://www.excelptp.com/wp-content/uploads/2021/05/react-native-banner-img.jpg',
+    thumbnail: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*l8gJIza6uuj84EyWl0OjSQ.jpeg',
     prerequisites: ['Basic JavaScript knowledge', 'Familiarity with React'],
     likes: 6,
     syllabus: [
@@ -119,7 +119,7 @@ const sampleCourses =[
     },
 
     {
-        id: 2, // Unique identifier for the course
+        id: 4, // Unique identifier for the course
         name: 'Introduction to Java',
         instructor: 'David',
         description: 'Learn the basics of React Native development and build your first mobile app.',
@@ -127,7 +127,7 @@ const sampleCourses =[
         duration: '8 weeks', // Duration of the course
         schedule: 'Tuesdays and Thursdays, 6:00 PM - 8:00 PM',
         location: 'Online',
-        thumbnail: 'https://www.excelptp.com/wp-content/uploads/2021/05/react-native-banner-img.jpg',
+        thumbnail: 'https://artoftesting.com/wp-content/uploads/2020/03/introduction-to-java-featured.jpg',
         prerequisites: ['Basic JavaScript knowledge', 'Familiarity with React'],
         likes: 6,
         syllabus: [

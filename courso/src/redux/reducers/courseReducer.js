@@ -1,4 +1,3 @@
-// reducers/courseReducer.js
 const initialState = {
     courses: [],
   };
@@ -10,7 +9,7 @@ const initialState = {
           ...state,
           courses: action.payload,
         };
-      // Add more cases as needed
+      
       default:
         return state;
     }

@@ -4,6 +4,7 @@ import { ReactComponent as Logo } from '../assets/home-line.svg'
 import './Header.css';
 
 const Header = () => {
+  // Display Details
   return (
     <header className="header">
       <div className="header-left">
