@@ -17,6 +17,7 @@
   
   .dashboard-content {
    top: 10px;
+   width: 100%;
  /* Adjust this value based on the height of the fixed selection block */
   }
 
@@ -56,10 +57,29 @@
     flex: 1;
   }
   
-  .progress-bar {
-    margin-top: 10px;
-  }
-  
+  .progress-bar-container {
+    width: 50%;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden; /* Hide overflowing progress bar */
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #007bff; /* Default color */
+    border-radius: 10px;
+    transition: width 0.3s; /* Add transition for smooth width changes */
+    text-align: center;
+    line-height: 20px;
+    color: #fff; /* Text color */
+    width: 50%; /* Initial width */
+}
+
+.progress-bar.completed {
+    width: 100%; /* Fill the progress bar completely */
+}
+
   input[type="checkbox"] {
     margin-right: 5px;
   }
@@ -70,3 +90,6 @@
   }
   /* Additional styles for dropdown and other elements */
   
+  .course-item{
+    width: 100%;
+  }

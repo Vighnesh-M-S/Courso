@@ -59,6 +59,7 @@ const StudentDashboard = () => {
           <div>
             <p>Hello, {selectedStudent}!</p>
             <p>Your enrolled courses:</p>
+            
             <div className="enrolled-courses">
               {enrolledCourses.map(course => (
                 <div key={course.id} className="course-item">
@@ -76,9 +77,13 @@ const StudentDashboard = () => {
                 />
               </label>
                     <p>Due Date: {course.duration}</p>
-                    <div className="progress-bar">
-                Progress: {completedCourses.includes(course.id) ? '100%' : '0%'}
-              </div>
+                    <div className="progress-bar-container">
+                      
+                    <div className={`progress-bar ${completedCourses.includes(course.id) ? 'completed' : ''}`}>
+                    {completedCourses.includes(course.id) ? 'Completed' : 'In Progress'}
+                    </div>
+                    </div>
+
                     <Link to={`/course/${course.id}`}>View Details</Link>
                   </div>
                 </div>
